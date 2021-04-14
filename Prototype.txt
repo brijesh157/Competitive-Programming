@@ -1,0 +1,53 @@
+import java.util.*;
+import java.io.*;
+public class Main  {
+    public static void main(String args[]) {
+      FastScanner fs=new FastScanner();    
+      PrintWriter out=new PrintWriter(System.out);
+        
+        out.flush();
+        out.close();
+    }
+	static void sort(int a[]){
+	    ArrayList<Integer> al=new ArrayList<>();
+	    for(int x:a)al.add(x);
+	    Collections.sort(al);
+	    for(int i=0;i<a.length;i++) a[i]=al.get(i);
+	}
+}
+        class FastScanner {
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st=new StringTokenizer("");
+		
+		String next() {
+			while (!st.hasMoreTokens())
+				try {
+				st=new StringTokenizer(br.readLine());
+				}
+				catch (IOException e) {
+					e.printStackTrace();
+				}
+			return st.nextToken();
+		}
+		String nextLine() {
+		    String str="";
+		    try {
+		        str=br.readLine();
+		    }
+		    catch (IOException e) {
+		        e.printStackTrace(); 
+		    }
+		    return str;
+		}
+		int nextInt() {
+			return Integer.parseInt(next());
+		}
+		long nextLong() {
+			return Long.parseLong(next());
+		}
+		int[] readArray(int n) {
+			int[] a=new int[n];
+			for (int i=0; i<n; i++) a[i]=nextInt();
+			return a;
+		}
+	}
